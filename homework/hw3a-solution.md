@@ -42,17 +42,22 @@
 ### Graduate Questions
 
 #### Question 1: The Three-Stage Model
-a) It was valuable to commit `README.md` and `.gitignore` first, and then `homework/hw3a-solution.md`, because those first two files belong to “setting up the repo.” Making that a separate commit keeps the history clean. If I had committed everything at once, I couldn’t easily see where the setup ended and the homework began.  
-b) I would commit the finished or independent changes now (fix typo, update README, working code). I would wait to commit the half-finished analysis function. The staging area lets me add only the ready files to the next commit so I don’t mix complete and incomplete work.  
-c) `git status` shows me what changed, what is staged, and what will be committed. I should run it before every commit so I don’t accidentally commit extra files.
+**a)** Committing `README.md` and `.gitignore` first made sense because those two files are part of “setting up the repo.” Putting them in their own commit keeps the history clean. Then the commit with `homework/hw3a-solution.md` clearly shows “this is the actual assignment.” If I had committed everything at once, I wouldn’t be able to tell where setup ended and homework started.
+
+**b)** From that list I would commit the finished things now (code to load data, typo fix, README update) and wait on the half-finished analysis function. The staging area helps because I can add only the complete pieces to the commit and leave the unfinished code unstaged until it’s ready.
+
+**c)** `git status` tells me what changed and what is staged, so I know exactly what will go into the next commit. I should run it a lot — especially right before `git commit` — so I don’t commit files by accident.
 
 #### Question 2: Local vs. Remote Repositories
-a) Git is “distributed” because my local clone has the full repository history and I can commit even without GitHub. That’s different from Google Drive/Dropbox which only store files and don’t track commits.  
-b) This is useful because I can work locally and commit many times, then later push to GitHub to share/backup. Developers aren’t blocked by the server.  
-c) I can pull from `class_repo` but not push because it’s the instructor’s repository and I only have read access. My own `my_repo` is mine, so I can both push and pull.
+**a)** Git is “distributed” because my local clone has the entire repo and history, so I can work and commit without being connected. That’s different from Google Drive/Dropbox, which mainly just sync files and don’t track commits.
+
+**b)** This is useful because I can do real work offline (edit, commit, look at history) and then later `git push` to GitHub when I’m online. It lets developers work independently and sync when they’re ready.
+
+**c)** `git clone` is the first download. `git pull` gets new changes from the remote. `git push` sends my commits up. I can pull from `class_repo` but not push because I don’t have write access. I can push to `my_repo` because I own that remote.
 
 #### Question 3: Professional Portfolio
-a) I should commit work that shows progress and learning, but I should not upload private data, passwords, or other students’ solutions. Small, meaningful commits are better.  
-b) A portfolio README should tell who I am, what this repo is for, and how it’s organized (`homework/`, `projects/`, `notes/`). That’s different from an open-source README, which is more about how to install/use the project.  
-c) Building the portfolio during the course creates a real history. The habits I should keep: commit often with good messages, organize folders, and push to GitHub regularly so the repo is always current.
+**a)** I should commit things that actually show progress (finished homework, cleaned notebooks) and avoid committing sensitive stuff or other people’s work. It’s okay to show the process, but the main branch should stay in a good state.
 
+**b)** A portfolio README should introduce me, say which class this is for, and show where to find homework/projects. An open-source README is more about how to install and use the code.
+
+**c)** Doing this during the semester builds a real timeline instead of dumping everything at the end. Good habits: commit often with clear messages, keep the repo organized, and push to GitHub regularly.
